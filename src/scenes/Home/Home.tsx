@@ -15,7 +15,6 @@ type Props = {
 
 const Home = ({ setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-  const flexBetween = "flex items-center justify-between";
 
   return (
     <section

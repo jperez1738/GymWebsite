@@ -8,6 +8,8 @@ const childVariant = {
   visible: { opacity: 1, x: 0 },
 };
 
+var hello;
+
 const Benefit = ({ icon, title, description, setSelectedPage }: Props) => {
   return (
     <motion.div

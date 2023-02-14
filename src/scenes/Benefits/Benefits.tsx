@@ -6,6 +6,10 @@ import {
 } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import { SectionText, Benefit } from "@/components";
+import AbstractWaves from "@/assets/AbstractWaves.png";
+import BenefitsPageGraphic from "@/assets/BenefitsPageGraphic.png";
+import { ActionButton } from "@/components/";
+
 type Props = {
   setSelectedPage: (page: SelectedPage) => void;
 };
@@ -89,6 +93,51 @@ const Benefits = ({ setSelectedPage }: Props) => {
             );
           })}
         </motion.div>
+
+        <div className="my-24 items-center md:flex md:justify-between">
+          <img
+            src={BenefitsPageGraphic}
+            alt="Benefits Page Graphic"
+            className="mx-auto"
+          />
+          <div className="md:w-2/5 ">
+            <div className="relative">
+              <div className="before:absolute before:-top-20 before:-left-20 before:content-abstractwaves">
+                <SectionText>
+                  MILLIONS OF HAPPY MEMBERS GETTING{" "}
+                  <span className="text-primary-300">FIT</span>.
+                </SectionText>
+              </div>
+            </div>
+
+            <p className="mt-6">
+              Aliquid, reiciendis tenetur! Possimus, saepe magni libero rem
+              quaerat non! Perferendis vitae rem beatae minus nihil debitis
+              magni quaerat suscipit enim. Sint beatae recusandae totam
+              perspiciatis, dolore sequi vel error, odio fugit atque
+              reprehenderit ex laboriosam!
+            </p>
+
+            <p className="mt-6">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+              cupiditate voluptatum corrupti temporibus esse, ratione qui
+              asperiores, soluta totam pariatur quidem odio corporis blanditiis!
+              Similique quas nesciunt suscipit vel nobis! Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Enim quasi delectus doloremque!
+              Sapiente, maxime?
+            </p>
+
+            <div className="relative mt-16">
+              <div className="z-10 flex  items-center">
+                <div className="before:absolute before:right-48 before:-top-5 before:-z-10 before:content-sparkles">
+                  <ActionButton setSelectedPage={setSelectedPage}>
+                    <p className="text-sm">Join Now</p>
+                  </ActionButton>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </motion.div>
     </section>
   );
